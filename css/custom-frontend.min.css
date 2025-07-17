@@ -64,7 +64,6 @@
     box-shadow: none;
     height: auto;
     max-width: 100%;
-    box-shadow: 0px 0px 10px 0px #fe5000;
 }
 
 .elementor .elementor-widget:not(.elementor-widget-text-editor):not(.elementor-widget-theme-post-content) figure {
