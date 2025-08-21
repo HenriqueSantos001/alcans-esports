@@ -3769,6 +3769,28 @@ end key */
 	</script>
 
 
+	<script>
+		// Se os dropdowns com as respostas das dúvidas frequentes mudar bugar, talvez seja aqui
+		document.addEventListener('DOMContentLoaded', function () {
+			const toggles = document.querySelectorAll('.elementor-toggle-item');
+			toggles.forEach(function (toggle) {
+				const title = toggle.querySelector('.elementor-tab-title');
+				const content = toggle.querySelector('.elementor-tab-content');
+				if (title && content) {
+					title.addEventListener('click', function () {
+						const expanded = title.getAttribute('aria-expanded') === 'true';
+						title.setAttribute('aria-expanded', !expanded);
+						title.classList.toggle('active');
+						content.style.display = expanded ? 'none' : 'block';
+					});
+					// Inicialmente esconde o conteúdo
+					content.style.display = 'none';
+				}
+			});
+		});
+	</script>
+
+
 </body>
 
 </html>
